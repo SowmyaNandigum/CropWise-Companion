@@ -1,0 +1,84 @@
+.navbar{
+  background: black !important;
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+div.container-fluid{
+    background: black;
+}
+.sopy{
+    background: black;
+}
+.nav-link{
+  color: white;
+  list-style: none;
+}
+.bx{
+  color: white;
+}
+.nav-link a{
+  color: white !important;
+}
+.navbar-brand a{
+  color: green;
+}
+.navbar-expand-lg .navbar-collapse {
+    direction: rtl;
+    float: right;
+    display: flex !important;
+    flex-basis: auto;
+}
+nav.navbar.navbar-expand-lg{
+    background-color: black;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  align-items: center;
+  margin: 0 7px;
+  position: relative;
+}
+.navbar ul li a{
+  text-decoration: none;
+  color: white;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+.nav-item{
+  padding-left: 3px;
+  list-style: none;
+    color: white;
+}
+
+h1 {
+			color: deeppink;
+			text-align: center;
+		}
+
+		.warning {
+			color: red;
+			font-weight: bold;
+			text-align: center;
+		}
+		.card{
+		margin-left:410px;
+		margin-top: 20px;
+		color: white;
+
+		}
+		.container{
+		background:#edf2f7 !important;
+		font-weight: bold;
+		padding-bottom:10px;
+		border-radius: 15px;
+		}
+        .try_card{
+            margin-left: 100px;
+        }

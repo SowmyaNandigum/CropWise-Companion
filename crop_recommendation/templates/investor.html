@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <title>cat</title>
+
+
+
+  </head>
+
+  <style>
+		h1 {
+			color: mediumseagreen;
+			text-align: center;
+            padding-bottom: 30px;
+		}
+
+        .classy{
+            padding-left: 200px;
+        }
+
+		.warning {
+			color: red;
+			font-weight: bold;
+			text-align: center;
+		}
+		.card{
+		margin-left:500px;
+		margin-top: 20px;
+		color: white;
+		}
+		.container{
+            padding-top: 40px;
+            margin-top: 40px;
+            height: 125vh;
+		background:#FEDCD2;
+		font-weight: bold;
+		padding-bottom:40px;
+		border-radius: 15px;
+		}
+        .navbar{
+            margin-bottom: 30px;
+        }
+        .navbar-nav{
+            padding-left: 1000px;
+
+
+        }
+        .btn{
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+         p{
+    color: white;
+    padding-left: 30px;
+  }
+  .group{
+    padding-top: 20px;
+  }
+
+	</style>
+
+  <body style="background:#8FD8D2">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">CropWise Companion</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse d-flex float-right" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex float-right">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="trends.html">Trending crops</a>
+        </li>
+          <li class="nav-item">
+          <a class="nav-link active" href="investor.html">Invest</a>
+        </li>
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+        <div id="group" class="got" >
+          <div><p class="txt" id="findline2"></p></div>
+            <div> <p class="txt" id="findname" type="text"></p></div>
+            <div> <p class="txt8" id="findold_c" ></p></div>
+            <div> <p class="txt" id="findneigh" type="text"></p></div>
+
+
+         <div><p class="txt" id="findbreaks"></p></div>
+         <div><p class="txt" id="findline"></p></div>
+
+
+
+
+           </div>
+
+    <script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  const firebaseConfig = {
+    apiKey: "AIzaSyBLPN_w3fEX0uuAnVXG0EpcLxLDvQ84w1Y",
+    authDomain: "investor-side.firebaseapp.com",
+    databaseURL: "https://investor-side-default-rtdb.firebaseio.com",
+    projectId: "investor-side",
+    storageBucket: "investor-side.appspot.com",
+    messagingSenderId: "864676723684",
+    appId: "1:864676723684:web:84737a12cb69fef7dde5f1"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  import{getDatabase,ref,set,child,update,remove}
+  from  "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+const db = getDatabase();
+var line2 = document.querySelector("#line2");
+
+      var name = document.querySelector("#oldd");
+      var old_c = document.querySelector("#oldd");
+      var neigh = document.querySelector("#neigh");
+
+      var line = document.querySelector("#line");
+
+
+
+
+      var insertBtn = document.querySelector("#send");
+
+      function insert(){
+      set( ref(db, "Investorside/" + name.innerHTML),  {
+        lin2 : line2.innerHTML   ,
+        name : name.innerHTML,
+        old_c : old_c.innerHTML,
+            neigh : neigh.innerHTML,
+
+
+            line : line.innerHTML,
+
+
+
+      })
+
+      .then(()=>{
+        alert("Successful")
+      })
+      .catch((error)=>{
+        alert(error)
+      });
+      }
+
+      function removeData(){
+        remove(ref(db,"Investorside/"))
+        .then(()=>{
+          alert("data removed successfully");
+        })
+        .catch((error)=>{
+        alert("unsuccessful,error"+error);
+        });
+      }
+
+
+
+
+
+      var div = document.getElementById('group');
+function FindData(finname,finold_c,finneigh,finline,finline2){
+
+
+let findline2 = document.createElement('p');
+  let findname= document.createElement('p');
+  let findold_c= document.createElement('p');
+  let findneigh= document.createElement('p');
+
+
+  let findline = document.createElement('p');
+
+findline2.innerHTML=finline2;
+  findname.innerHTML=finname;
+  findold_c.innerHTML=finold_c;
+  findneigh.innerHTML=finneigh;
+
+
+  findline.innerHTML=finline;
+  div.appendChild(findline2);
+  div.appendChild(findname);
+  div.appendChild(findold_c);
+  div.appendChild(findneigh);
+
+  div.appendChild(findline);
+
+
+}
+
+function FetchAllData(Investorside){
+  div.innerHTML="";
+  Investorside.forEach(element =>{
+    FindData(element.name,element.neigh,element.old_c,element.line,element.line2);
+
+  });
+}
+
+function getAllDataOnce(){
+  const dbRef = ref(db);
+  get(child(dbRef,"Investorside"))
+  .then((snapshot)=>{
+    var invs =[];
+    snapshot.forEach(childSnapshot =>{
+invs.push(childSnapshot.val());
+    });
+
+    FetchAllData(invs);
+  });
+}
+window.onload = getAllDataOnce;
+      </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+  </body>
+</html>
