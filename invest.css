@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,200&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+}
+    
+    .fill{
+        color: var(--bg-color);
+        background: var(--body-color);
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    h4{
+      color: white;
+    }
+    .top .bx{
+      font-size: 30px;
+      color: white;
+    }
+    .hr{
+     
+      color: white;
+    }
+    .form-label{
+      color: white;
+    }
+    
+    .form-control{
+      width: 50%;
+      
+    }
+    .mb-3{
+      padding: 10px 20px;
+      margin-left: 5%;
+    }
+    .form-check{
+      padding-left: 30px;
+    }
+    .form-check-label{
+      color: white;
+      padding-left: 5px;
+    }
+    .form-check-input{
+      margin-left: 10px;
+    }
+    .tog{
+      padding-left: 20px;
+      display: inline-flex;
+      margin-left: 5%;
+    }
+    .txt{
+      color: white;
+    }
+    .button{
+      padding: 10px 20px;
+      text-decoration: none;
+      color: black;
+      border-radius: 3rem;
+      
+    }
+    .but{
+      border-radius: 0.9rem;
+      margin-left: 22%;
+      
+    }
+    
+    .butts{
+      padding-top: 20px;
+      padding-bottom: 20px;
+      width: 100%;
+     
+    }
+    .footer{
+        background: #088F8F;
+    }
+    ul{
+        list-style: none;
+      }
+      .row2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .footer-col{
+        width: 30%;
+        padding: 15px 20px;
+      }
+      .footer-col a{
+        color: white;
+        text-decoration: none;
+      }
+      
+      .social{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 0.5rem;
+        margin-top: 20px;
+        padding-left: 10px;
+      }.social .bx{
+        font-size: 1.3rem;
+        padding: 10px;
+        margin-right: 10px;
+        border-radius: 50%;
+        color: blue;
+        background:white;
+      }
+      .social .bx:hover{
+        background: #088F8F;
+        transition: 0.3s all linear;
+      
+      }
+      .connect{
+        color: white;
+        font-size: 20px;
+      }
+      .foo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .about{
+        padding: 6px 0;
+      }
+      .pri{
+        padding: 6px 0;
+      }
+      .home{
+        padding-top: 10px;
+      }
+      .space{
+        padding-top: 18px;
+      }
+      .coo{
+        color: black;
+      }
+    
+      .contact-form{
+        max-width: 800px;
+        margin: auto;
+        width: 100%;
+        display: grid;
+        row-gap: 2rem;
+        margin: 5px;
+       
+      }
+    a{
+      text-decoration: none;
+      color: white;
+    }
+    
+    
+.will{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.banner{
+  width:100%;
+  height: 100vh;
+  
+}
+.arr{
+    position: absolute;
+    left: 46%;
+}
+.inn{
+  max-width: 50%;
+ 
+  
+}
+.answer{
+  margin-top: 15px;
+}
+
+.dropdown-menu li{
+  background-color: black;
+
+}
+.dropdown-menu li a{
+  color: white;
+}
+.dropdown .btn{
+  margin-top: 0;
+}
+.so a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+#name{
+  padding: 5px;
+}

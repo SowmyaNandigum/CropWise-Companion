@@ -1,0 +1,59 @@
+
+
+.chat-container {
+    position: relative;
+}
+
+.chat-logo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.chat-box {
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 550px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #fff;
+}
+
+.chat-header {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.chat-body {
+    padding: 10px;
+    height: 200px;
+    overflow-y: hidden;
+    
+    
+}
+
+.chat-footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.chat-footer button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.chat-footer button:hover {
+    background-color: #4CAF50;
+    color: #fff;
+}

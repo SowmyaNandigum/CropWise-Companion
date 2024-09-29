@@ -1,0 +1,26 @@
+#done{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.dropdown-menu li{
+    background-color: black;
+  
+  }
+  .dropdown-menu li a{
+    color: white;
+  }
+  .dropdown .btn{
+    margin-top: 0;
+  }
+#done{
+  margin-bottom: 10px;
+}
+.aaa .btn-lg{
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+.opt{
+  color: white;
+  text-decoration: none;
+}

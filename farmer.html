@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>cat</title>
+    <link rel="stylesheet" href="invest.css">
+    <link rel="stylesheet" href="chat.css">
+</head>
+<style>
+    h1 {
+        color: mediumseagreen;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .classy {
+        padding-left: 200px;
+    }
+
+    .warning {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card {
+        margin-left: 500px;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .container {
+        padding-top: 40px;
+        margin-top: 40px;
+        height: 125vh;
+        background: #FEDCD2;
+        font-weight: bold;
+        padding-bottom: 40px;
+        border-radius: 15px;
+    }
+
+    .navbar {
+        margin-bottom: 30px;
+    }
+
+    .navbar-nav {
+        padding-left: 600px;
+
+
+    }
+
+    .navbar-nav li {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+</style>
+
+
+<body style="background:#8FD8D2">
+    <!--=======================navbar=====================================================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">CropWise Companion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex float-right" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex float-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <div class="dropdown">
+                            <button class="btn btn-dark dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                             Recommendation
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="nav-link active" aria-current="page" href=" http://127.0.0.1:5000/">Crop Recommendation</a></li>
+                                <li><a class="nav-link active" aria-current="page" href=" http://127.0.0.1:5001">Fertilizer Recommendation</a></li>
+                                <li><a class="nav-link active" aria-current="page" href="  http://localhost:8501">Disease Prediction</a></li> 
+                            </ul>
+                          </div>
+                    </li>
+                
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="trends.html">Trending crops</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="Mycrop.html">My crops</a>
+                    </li>
+      
+  
+                </ul>
+  
+            </div>
+        </div>
+    </nav>
+          
+
+    <main class="container">
+        <section class="fill">
+            <form action="" class="contact-form" id="contact-form" data-aos="fade-right" data-aos-offset="300"
+                data-aos-easing="ease-in-sine">
+                <input type="text" placeholder="Your Name" class="name btn-lg" id="name" data-aos="fade-left"
+                    data-aos-duration="500" data-aos-easing="linear" required>
+                <input type="number" id="proof" placeholder="ID Proof No." class="proof btn-lg" required>
+                <input type="number" id="phone" placeholder="Phone No" class="phone btn-lg" required>
+                <input type="text" id="address" placeholder="Place" class="address btn-lg" required>
+
+
+                <input type="text" id="crop" placeholder="Crop" class="ideal btn-lg" required>
+                <!-- <input type="number" id="area" placeholder="Timeline for the crop" class="area btn-lg"
+                    required>
+                <input type="number" id="price" placeholder="Approximate Price Range" class="price btn-lg" required>  -->
+                <input type="email" id="email" placeholder="Email" class="Email btn-lg" required>
+                <input type="text" id="so" placeholder="Type of Soil" class="Email btn-lg" required>
+                <input type="email" id="crop" placeholder="Area" class="Email btn-lg" required>
+
+
+
+
+
+
+
+            </form>
+
+
+
+            <div class="chat-container">
+                <div id="chat-logo" class="chat-logo" onclick="openChat()">🤖</div>
+                <div id="chat-box" class="chat-box">
+                    <div class="chat-header">Chatbot</div>
+                    <div class="chat-body" id="chat-body"></div>
+                    <div class="chat-footer">
+                        <button onclick="handleButtonClick(1)" class="quest"><b>Question 1.</b> How to find the NPK(Nitrogen posphorus and and potassium) Values?</button>
+                        <button onclick="handleButtonClick(2)" class="quest"><b>Question 2. </b>Where can i buy the proper fertilizer?</button>
+                        <button onclick="handleButtonClick(3)" class="quest"><b>Question 3. </b>What can i do if i Dont have proper NPK values?</button>
+                        <button onclick="handleButtonClick(4)" class="quest"><b>Question 4. </b>How much should i pay for the confirmation of agreement?</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <button class="btn btn-lg btn-dark btn-outline-danger" style="margin-left: 600px" id="send">Submit</button>
+
+        <div class="chat-container">
+            <div id="chat-logo" class="chat-logo" onclick="openChat()">🤖</div>
+            <div id="chat-box" class="chat-box">
+                <div class="chat-header">Chatbot</div>
+                <div class="chat-body" id="chat-body"></div>
+                <div class="chat-footer">
+                    <button onclick="handleButtonClick(1)">Question 1</button>
+                    <button onclick="handleButtonClick(2)">Question 2</button>
+                    <button onclick="handleButtonClick(3)">Question 3</button>
+                    <button onclick="handleButtonClick(4)">Question 4</button>
+                </div>
+            </div>
+        </div>
+
+
+    
+
+    </main>
+
+
+
+
+
+
+    <!-- <script src="main.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+          apiKey: "AIzaSyAfvz-kM1fboD_mOv9-pPuRMZwi8jeviuM",
+          authDomain: "ouriot-9cd0c.firebaseapp.com",
+          databaseURL: "https://ouriot-9cd0c-default-rtdb.firebaseio.com",
+          projectId: "ouriot-9cd0c",
+          storageBucket: "ouriot-9cd0c.appspot.com",
+          messagingSenderId: "348712288378",
+          appId: "1:348712288378:web:42decd55b932c94a96bbc3",
+          measurementId: "G-NH51R635WJ"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+     
+        import { getDatabase, ref, set, child, update, remove }
+            from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+        const db = getDatabase();
+
+        let name = document.getElementById("name");
+        let proof = document.getElementById("proof");
+        let phone = document.getElementById("phone");
+        let address = document.getElementById("address");
+        let crop = document.getElementById("crop");
+        
+        let email = document.getElementById("email")
+
+
+
+        let send = document.getElementById("send");
+
+        function InsertData() {
+            set(ref(db, 'profile/' + name.value ), {
+                name: name.value,
+                proof: proof.value,
+                phone: phone.value,
+
+                
+                address: address.value,
+                crop: crop.value,
+                
+
+                email: email.value
+
+
+            })
+                .then(() => {
+                    alert("data stored successfully");
+                })
+                .catch((error) => {
+                    alert("unsuccessful,error" + error);
+                });
+        }
+
+        send.addEventListener('click', InsertData);
+
+
+
+
+    </script>
+
+
+ 
+
+
+    <script src="searching.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script src="app.js">
+    </script>
+     <script src="chat.js"></script>
+
+    
+ 
+
+    
+    
+        <div class="chat-container">
+            <div id="chat-logo" class="chat-logo" onclick="openChat()">🤖</div>
+            <div id="chat-box" class="chat-box">
+                <div class="chat-header">Chatbot</div>
+                <div class="chat-body" id="chat-body"></div>
+                <div class="chat-footer">
+                    <button onclick="handleButtonClick(1)">Question 1</button>
+                    <button onclick="handleButtonClick(2)">Question 2</button>
+                    <button onclick="handleButtonClick(3)">Question 3</button>
+                    <button onclick="handleButtonClick(4)">Question 4</button>
+                </div>
+            </div>
+        </div> 
+        <script src="script.js"></script>
+
+    
+
+</body>
+
+</html>

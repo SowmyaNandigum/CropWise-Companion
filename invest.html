@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>cat</title>
+    <link rel="stylesheet" href="invest.css">
+</head>
+<style>
+    h1 {
+        color: mediumseagreen;
+        text-align: center;
+        padding-bottom: 30px;
+    }
+
+    .classy {
+        padding-left: 200px;
+    }
+
+    .warning {
+        color: red;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .card {
+        margin-left: 500px;
+        margin-top: 20px;
+        color: white;
+    }
+
+    .container {
+        padding-top: 40px;
+        margin-top: 40px;
+        height: 125vh;
+        background: #FEDCD2;
+        font-weight: bold;
+        padding-bottom: 40px;
+        border-radius: 15px;
+    }
+
+    .navbar {
+        margin-bottom: 30px;
+    }
+
+    .navbar-nav {
+        padding-left: 700px;
+
+
+    }
+    .navbar-nav li{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+</style>
+
+
+
+
+<body style="background:#8FD8D2">
+    <!--=======================navbar=====================================================-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">CropWise Companion</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse d-flex float-right" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex float-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+            
+                    <li class="nav-item">
+                        <a class="nav-link active" href="invest.html">Invest</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="myinvest.html">My Investments</a>
+                    </li>
+
+
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="fill">
+            <form action="" class="contact-form" id="contact-form" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">
+                <input type="text" placeholder="Your Name" class="name btn-lg" id="name" data-aos="fade-left"
+                    data-aos-duration="500" data-aos-easing="linear" required>
+                <input type="number" id="proof" placeholder="ID Proof No." class="proof btn-lg" required>
+                <input type="number" id="phone" placeholder="Phone No" class="phone btn-lg" required>
+                
+                <input type="text" id="job" placeholder="Occupation" class="job btn-lg" required>
+                <input type="text" id="address" placeholder="Address" class="address btn-lg" required>
+                
+                
+                <input type="text" id="ideal" placeholder="What crop do you need?" class="ideal btn-lg"
+                    required>
+                <input type="number" id="area" placeholder="Timeline for the crop" class="area btn-lg"
+                    required>
+                <input type="number" id="price" placeholder="Approximate Price Range" class="price btn-lg" required> 
+                <input type="email" id="email" placeholder="Email" class="Email btn-lg" required>
+                
+
+
+
+                
+
+            </form>
+            
+          
+            
+
+        </section>
+        <button class="btn btn-lg btn-dark btn-outline-danger" style="margin-left: 600px" id="send">Submit</button>
+        <div class="so">
+        <a href="Invpage.html"><button class="btn-lg text-center">Visit page</button></a>
+    </div>
+    </main>
+    
+
+
+
+
+  
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+   
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAeL6jIt9R8xaehnJRE7vOLnhL26ZThjrA",
+          authDomain: "farmerform-3c6ff.firebaseapp.com",
+          databaseURL: "https://farmerform-3c6ff-default-rtdb.firebaseio.com",
+          projectId: "farmerform-3c6ff",
+          storageBucket: "farmerform-3c6ff.appspot.com",
+          messagingSenderId: "847824246158",
+          appId: "1:847824246158:web:6291ff7d56aa47b59500df"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        import { getDatabase, ref, set, child, update, remove }
+            from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+
+        const db = getDatabase();
+
+        let name = document.getElementById("name");
+        let proof = document.getElementById("proof");
+        let phone = document.getElementById("phone");
+        
+        let job = document.getElementById("job");
+        let address = document.getElementById("address");
+        let ideal = document.getElementById("ideal");
+        let area = document.getElementById("area");
+        let price = document.getElementById("price");
+        let email = document.getElementById("email")
+
+
+
+        let send = document.getElementById("send");
+
+        function InsertData() {
+            set(ref(db, 'Farmer/' + name.value), {
+                Name: name.value,
+                IDProof: proof.value,
+                PhoneNo: phone.value,
+                
+                Occupation: job.value,
+                Address: address.value,
+                Crop: ideal.value,
+                Areas: area.value,
+                PriceRange: price.value,
+                
+                Email: email.value
+
+
+            })
+                .then(() => {
+                    alert("data stored successfully");
+                })
+                .catch((error) => {
+                    alert("unsuccessful,error" + error);
+                });
+        }
+
+        send.addEventListener('click', InsertData);
+
+
+
+
+    </script>
+
+</body>
+
+</html>
